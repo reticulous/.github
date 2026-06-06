@@ -23,17 +23,17 @@ the device builds on.
 
 | Repo                                                                 | What it adds                                                       |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [reticulous-core](https://github.com/reticulous/reticulous-core)     | RNS protocol core (identity, path table, Links, Resources) + the µR fork |
-| [reticulous-tcp](https://github.com/reticulous/reticulous-tcp)       | RNS-over-TCP transport                                             |
-| [reticulous-auto](https://github.com/reticulous/reticulous-auto)     | AutoInterface transport (IPv6 link-local multicast + unicast UDP)  |
-| [reticulous-espnow](https://github.com/reticulous/reticulous-espnow) | RNS-over-ESP-NOW transport (long-range PHY, no IP stack)           |
-| [reticulous-lora](https://github.com/reticulous/reticulous-lora)     | SX1262 LoRa transport with RNode on-air framing                    |
-| [reticulous-lxmf](https://github.com/reticulous/reticulous-lxmf)     | LXMF messaging (multi-identity, Link + Resource transfer)          |
-| [reticulous-nomad](https://github.com/reticulous/reticulous-nomad)   | Nomad Network page client                                          |
+| [rns](https://github.com/reticulous/rns)     | RNS protocol core (identity, path table, Links, Resources) + the µR fork |
+| [iface-tcp](https://github.com/reticulous/iface-tcp)       | RNS-over-TCP transport                                             |
+| [iface-auto](https://github.com/reticulous/iface-auto)     | AutoInterface transport (IPv6 link-local multicast + unicast UDP)  |
+| [iface-espnow](https://github.com/reticulous/iface-espnow) | RNS-over-ESP-NOW transport (long-range PHY, no IP stack)           |
+| [iface-lora](https://github.com/reticulous/iface-lora)     | SX1262 LoRa transport with RNode on-air framing                    |
+| [lxmf](https://github.com/reticulous/lxmf)     | LXMF messaging (multi-identity, Link + Resource transfer)          |
+| [nomad](https://github.com/reticulous/nomad)   | Nomad Network page client                                          |
 | [maps](https://github.com/reticulous/maps)                           | Offline RGB565 slippy-map viewer (LCD + GPS, no RNS dep)           |
-| [reticulous-tdeck](https://github.com/reticulous/reticulous-tdeck)   | The app straddle: T-Deck Plus board HAL, GNSS, partitions, OTA key, browser SPA shell |
+| [hw-tdeck](https://github.com/reticulous/hw-tdeck)   | The app straddle: T-Deck Plus board HAL, GNSS, partitions, OTA key, browser SPA shell |
 
-To build the device firmware, you depend on `reticulous-tdeck` (the app
+To build the device firmware, you depend on `hw-tdeck` (the app
 straddle); it pulls in the rest of the family plus the spangap straddles
 it needs.
 
@@ -58,7 +58,7 @@ the spangap platform — it drives spangap's API and tests every assumption
 the platform makes. Most reticulous straddles depend on a few spangap
 straddles each (spangap-core for the base runtime, spangap-net for the
 IP transports, spangap-web for the browser SPA, spangap-lcd for the
-on-device LVGL UI). The app straddle (`reticulous-tdeck`) pulls in
+on-device LVGL UI). The app straddle (`hw-tdeck`) pulls in
 everything.
 
 Anything *platform-wide* — ITS, storage, the unified filesystem, the
@@ -80,7 +80,7 @@ windows, full LXMF chat UI. The on-device LVGL UI is built out: LXMF
 messenger, Nomad browser, offline maps.
 
 The authoritative architecture + rollout plan lives in
-[reticulous-tdeck/docs/component-plan.md](https://github.com/reticulous/reticulous-tdeck/tree/main/docs/component-plan.md)
+[hw-tdeck/docs/component-plan.md](https://github.com/reticulous/hw-tdeck/tree/main/docs/component-plan.md)
 — several decisions there are non-obvious; read it before working on
 anything sizeable.
 
