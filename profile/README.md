@@ -24,10 +24,10 @@ the device builds on.
 | Repo                                                                 | What it adds                                                       |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | [rns](https://github.com/reticulous/rns)     | RNS protocol core (identity, path table, Links, Resources) + the µR fork |
-| [tr-tcp](https://github.com/reticulous/tr-tcp)       | RNS-over-TCP transport                                             |
-| [tr-auto](https://github.com/reticulous/tr-auto)     | AutoInterface transport (IPv6 link-local multicast + unicast UDP)  |
-| [tr-espnow](https://github.com/reticulous/tr-espnow) | RNS-over-ESP-NOW transport (long-range PHY, no IP stack)           |
-| [tr-lora](https://github.com/reticulous/tr-lora)     | SX1262 LoRa transport with RNode on-air framing                    |
+| [iface-tcp](https://github.com/reticulous/iface-tcp)       | RNS-over-TCP transport                                             |
+| [iface-auto](https://github.com/reticulous/iface-auto)     | AutoInterface transport (IPv6 link-local multicast + unicast UDP)  |
+| [iface-espnow](https://github.com/reticulous/iface-espnow) | RNS-over-ESP-NOW transport (long-range PHY, no IP stack)           |
+| [iface-lora](https://github.com/reticulous/iface-lora)     | SX1262 LoRa transport with RNode on-air framing                    |
 | [lxmf](https://github.com/reticulous/lxmf)     | LXMF messaging (multi-identity, Link + Resource transfer)          |
 | [nomad](https://github.com/reticulous/nomad)   | Nomad Network page client                                          |
 | [maps](https://github.com/reticulous/maps)                           | Offline RGB565 slippy-map viewer (LCD + GPS, no RNS dep)           |
