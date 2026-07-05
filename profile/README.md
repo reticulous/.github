@@ -8,26 +8,28 @@ Back to Reticulous, which at the moment comes with ready-made hardware support m
 
 ## Getting started
 
-At this very early stage of their development, both Spangap and Reticulous still lack some of the documentation they will have soon. But to get you started if you can't wait for everything to be finished, here's a very quick description of how to build and flash the software.
+At this very early stage of their development, both Spangap and Reticulous still lack some of the documentation they will have soon. But to get you started if you can't wait for everything to be finished, here's a very quick description of how to build and flash the software. To do this, you must have `docker` installed and running, and you must have `python`, `git` and `curl`. Nothing will be installed on your system outside of the spangap project directory you initialize. 
 
-The procedure below should work for Linux, Mac and possibly also for Windows Subsystem for Linux (the latter untested as of now). Let's say you are in your homedir on a Mac and want to build the Reticulous mesh networking software that relies on Spangap and run it on the LilyGo T-Deck Plus device connected to port `/dev/cu.usbmodem1101` on your Mac. You'll first need to install the `spangap` command line tool somewhere that is in your `$PATH`. Let's say we put it in `~/bin` which is already in your `$PATH` and you'd like the workspace directory to be called `tdeck`, directly below your homedir. In a terminal window, enter:
+The procedure below should work for Linux, Mac and possibly also for Windows Subsystem for Linux (the latter untested as of now). Let's say you are in your homedir on a Mac and want to build the Reticulous mesh networking software that relies on Spangap and run it on the LilyGo T-Deck Plus device connected to port `/dev/cu.usbmodem2101` on your Mac. You'll first need to install `spangap`. For this, you do:
 
 ```sh
-curl -o ~/bin/spangap https://raw.githubusercontent.com/spangap/spangap/spangap && \
-chmod a+x ~/bin/spangap && \
-spangap init tdeck && \
-cd tdeck && \
-spangap monitor /dev/cu.usbmodem1101
+curl -fsSL https://spangap.org/install.sh | sh
 ```
 
-(If system doesn't seem to know about spangap, enter `rehash` and/or try last three lines again from a new terminal window.)
+Then create the workspace and start a serial monitor: 
+
+```sh
+spangap init reticulous && \
+cd reticulous && \
+spangap monitor /dev/cu.usbmodem2101
+```
 
 Leave `spangap monitor` running, it will show you the device log output and once we're done will allow you to switch to CLI mode by simply typing a command.
 
 Now open another terminal window and do:
 
 ```sh
-cd tdeck && \
+cd reticulous && \
 spangap build reticulous/reticulous --with spangap/hw-tdeck && \
 spangap flash
 ```
