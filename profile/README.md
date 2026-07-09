@@ -38,6 +38,18 @@ Everything is packaged as *straddles* — Spangap's self-contained modules, each
 
 ## Getting started
 
+### Flashing
+
+It is really early days. Some stuff doesn't work yet., some stuff looks ugly. You're literally one of the very first users. If you just want to flash a unit, click a link below:
+
+* [T-Deck Plus](https://reticulous.net/flasher?build=tdeck)
+* [Heltec V4](https://reticulous.net/flasher?build=heltecv4)
+* [Generic - No LoRa](https://reticulous.net/flasher?build=generic)
+
+### Building
+
+But much more interesting than just flashing your device is to install `spangap` and compile for yourself.
+
 At this very early stage of their development, both Spangap and Reticulous still lack some of the documentation they will have soon. But to get you started if you can't wait for everything to be finished, here's a very quick description of how to build and flash the software. To do this, you must have `docker` installed and running, and you must have `python`, `git` and `curl`. Nothing will be installed on your system outside of the spangap project directory you initialize. 
 
 The procedure below should work for Linux, Mac and possibly also for Windows Subsystem for Linux (the latter untested as of now). Let's say you are in your homedir on a Mac and want to build the Reticulous mesh networking software that relies on Spangap and run it on the LilyGo T-Deck Plus device connected to port `/dev/cu.usbmodem2101` on your Mac. You'll first need to install `spangap`. For this, you do:
