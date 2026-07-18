@@ -35,6 +35,7 @@ Everything is packaged as *straddles* — Spangap's self-contained modules, each
 
 - **`spangap/hw-tdeck`** — LilyGO T-Deck Plus: LoRa (SX1262), 320×240 LCD, QWERTY keyboard, trackball, GNSS and microSD.
 - **`spangap/hw-heltecv4`** — Heltec V4 LoRa board (headless).
+- **`spangap/hw-nibble-zero`** — Retia Nibble Zero: ESP32-S3-Zero + LoRa (SX1262), Flipper Zero add-on (headless).
 
 ## Getting started
 
@@ -44,6 +45,7 @@ It is really early days. Some stuff doesn't work yet., some stuff looks ugly. Yo
 
 * [T-Deck Plus](https://reticulous.net/flasher?build=tdeck)
 * [Heltec V4](https://reticulous.net/flasher?build=heltecv4)
+* [Nibble Zero](https://reticulous.net/flasher?build=nibblezero)
 * [Generic - No LoRa](https://reticulous.net/flasher?build=generic)
 
 ### Building
