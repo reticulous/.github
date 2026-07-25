@@ -47,12 +47,12 @@ It is really early days. Some stuff doesn't work yet, some stuff looks ugly. You
 
 **From a browser** — open **[reticulous.net/flashmon](https://reticulous.net/flashmon)** in a Chromium-based browser (desktop Chrome, Edge, Brave or Opera), plug your board in over USB, and click through. It auto-detects which board you have, flashes the matching image (or a generic one), and drops into a serial monitor — no toolchain, no build to pick, and no install.
 
-**No Chromium browser, or you'd rather flash from the command line** — grab the single-file terminal flasher and point it at the same place:
+**No Chromium browser, or you'd rather flash from the command line** — grab the single-file terminal flasher (it already knows where to fetch from, so it takes no arguments):
 
 ```sh
-curl -O https://reticulous.net/flashmon/flashmon.py
-chmod +x flashmon.py
-./flashmon.py --url https://reticulous.net/flashmon/
+curl -O https://reticulous.net/flashmon/reticulous-flashmon
+chmod +x reticulous-flashmon
+./reticulous-flashmon
 ```
 
 Only Python 3.8+ is needed; on first run it sets up its own tools in a private folder (nothing system-wide, no admin), then picks your serial port, detects the board, flashes, and opens a monitor.
