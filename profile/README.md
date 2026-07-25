@@ -57,6 +57,8 @@ chmod +x flashmon.py
 
 Only Python 3.8+ is needed; on first run it sets up its own tools in a private folder (nothing system-wide, no admin), then picks your serial port, detects the board, flashes, and opens a monitor.
 
+**Fully offline, or no Python at all** — download the self-contained **[offline installer](https://reticulous.net/flashmon/offline-installer/)** (`reticulous.net/flashmon/offline-installer/`). It's one cross-platform zip bundling the flasher, the firmware images and the flashing tools, so it runs on a machine with no internet and no toolchain: unzip it, run the `reticulous-flashmon` script inside, and it flashes and monitors like the command-line flasher above (on Windows, run `python reticulous-flashmon` from the unzipped folder).
+
 ### Building
 
 But much more interesting than just flashing your device is to install `spangap` and compile for yourself.
