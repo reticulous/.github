@@ -43,14 +43,19 @@ Everything is packaged as *straddles* — Spangap's self-contained modules, each
 
 ### Flashing
 
-It is really early days. Some stuff doesn't work yet., some stuff looks ugly. You're literally one of the very first users. If you just want to flash a unit, click a link below:
+It is really early days. Some stuff doesn't work yet, some stuff looks ugly. You're literally one of the very first users. If you just want to flash a unit:
 
-* [T-Deck Plus](https://reticulous.net/flasher?build=tdeck)
-* [Heltec V4](https://reticulous.net/flasher?build=heltecv4)
-* [Nibble Zero](https://reticulous.net/flasher?build=nibblezero)
-* [XIAO ESP32S3 + Wio-SX1262](https://reticulous.net/flasher?build=xiao-sx1262)
-* [LilyGo T3-S3](https://reticulous.net/flasher?build=t3s3)
-* [Generic - No LoRa](https://reticulous.net/flasher?build=generic)
+**From a browser** — open **[reticulous.net/flashmon](https://reticulous.net/flashmon)** in a Chromium-based browser (desktop Chrome, Edge, Brave or Opera), plug your board in over USB, and click through. It auto-detects which board you have, flashes the matching image (or a generic one), and drops into a serial monitor — no toolchain, no build to pick, and no install.
+
+**No Chromium browser, or you'd rather flash from the command line** — grab the single-file terminal flasher and point it at the same place:
+
+```sh
+curl -O https://reticulous.net/flashmon/flashmon.py
+chmod +x flashmon.py
+./flashmon.py --url https://reticulous.net/flashmon/
+```
+
+Only Python 3.8+ is needed; on first run it sets up its own tools in a private folder (nothing system-wide, no admin), then picks your serial port, detects the board, flashes, and opens a monitor.
 
 ### Building
 
