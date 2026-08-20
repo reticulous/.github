@@ -35,6 +35,9 @@ Everything is packaged as *straddles* — Spangap's self-contained modules, each
 
 - **`spangap/hw-lilygo-tdeck`** — LilyGO T-Deck Plus: LoRa (SX1262), 320×240 LCD, QWERTY keyboard, trackball, GNSS and microSD.
 - **`spangap/hw-heltecv4`** — Heltec V4 LoRa board (headless).
+- **`spangap/hw-meshnology-w12`** — Meshnology W12: LR2021 dual-band LoRa behind a 30 dBm front end, 0.96" OLED, GNSS header.
+- **`spangap/hw-wismesh-tap-v2`** — RAK WisMesh TAP V2: handheld LoRa (SX1262) with a 2.8" capacitive touch screen, GNSS and microSD.
+- **`spangap/hw-lilygo-tbeam-supreme`** — LilyGo T-Beam S3 Supreme: LoRa (SX1262), AXP2101-gated rails, GNSS, battery-backed RTC, 1.3" OLED, 18650 holder.
 - **`spangap/hw-nibble-zero`** — Retia Nibble Zero: ESP32-S3-Zero + LoRa (SX1262), Flipper Zero add-on (headless).
 - **`spangap/hw-xiao-esp32s3-sx1262`** — Seeed XIAO ESP32S3 + Wio-SX1262: thumb-sized LoRa (SX1262) kit (headless).
 - **`spangap/hw-lilygo-t3s3-sx1262`** — LilyGo T3-S3 (LoRa32): SX1262 + microSD (headless).
