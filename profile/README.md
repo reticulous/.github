@@ -51,17 +51,17 @@ It is really early days. Some stuff doesn't work yet, some stuff looks ugly. You
 
 **From a browser** — open **[reticulous.net/flashmon](https://reticulous.net/flashmon)** in a Chromium-based browser (desktop Chrome, Edge, Brave or Opera), plug your board in over USB, and click through. It auto-detects which board you have, flashes the matching image (or a generic one), and drops into a serial monitor — no toolchain, no build to pick, and no install.
 
-**No Chromium browser, or you'd rather flash from the command line** — grab the single-file terminal flasher (it already knows where to fetch from, so it takes no arguments):
+**From a workspace** — if you have `spangap` installed to build for yourself (below), that same workspace flashes: `spangap flash` after a `spangap build`.
+
+**By hand** — download an image zip from [the catalogue](https://reticulous.net/builds/stable/) and unpack it. Inside is a `reticulous.esptool` argfile naming every binary and the offset it belongs at, so the whole flash is one esptool invocation:
 
 ```sh
-curl -O https://reticulous.net/flashmon/reticulous-flashmon
-chmod +x reticulous-flashmon
-./reticulous-flashmon
+unzip reticulous_hw-lilygo-tdeck_<stamp>.zip -d image
+cd image
+esptool.py --port /dev/ttyACM0 write_flash @reticulous.esptool
 ```
 
-Only Python 3.8+ is needed; on first run it sets up its own tools in a private folder (nothing system-wide, no admin), then picks your serial port, detects the board, flashes, and opens a monitor.
-
-**Fully offline, or no Python at all** — download the self-contained **[offline installer](https://reticulous.net/flashmon/offline-installer/)** (`reticulous.net/flashmon/offline-installer/`). It's one cross-platform zip bundling the flasher, the firmware images and the flashing tools, so it runs on a machine with no internet and no toolchain: unzip it, run the `reticulous-flashmon` script inside, and it flashes and monitors like the command-line flasher above (on Windows, run `python reticulous-flashmon` from the unzipped folder).
+Those three are the whole of it. For watching the serial console there are two: the monitor flashmon keeps open in its browser tab, and `spangap monitor <port>` from a workspace. (The device's CLI is also reachable over the network — the web UI and `ssh` — once it is on one.)
 
 ### Building
 
