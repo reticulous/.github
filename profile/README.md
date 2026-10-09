@@ -42,6 +42,7 @@ Everything is packaged as *straddles* — Spangap's self-contained modules, each
 - **`spangap/hw-nibble-zero`** — Retia Nibble Zero: ESP32-S3-Zero + LoRa (SX1262), Flipper Zero add-on (headless).
 - **`spangap/hw-xiao-esp32s3-sx1262`** — Seeed XIAO ESP32S3 + Wio-SX1262: thumb-sized LoRa (SX1262) kit (headless).
 - **`spangap/hw-lilygo-t3s3-sx1262`** — LilyGo T3-S3 (LoRa32): SX1262 + microSD (headless).
+- **`spangap/hw-lilygo-t3s3-lr1121`** — LilyGo T3-S3 (LoRa32): dual-band LR1121 + microSD (headless).
 
 ## Getting started
 
