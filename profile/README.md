@@ -34,7 +34,8 @@ Everything is packaged as *straddles* — Spangap's self-contained modules, each
 **Board support** (the `--with` target, provided as Spangap-org straddles):
 
 - **`spangap/hw-lilygo-tdeck`** — LilyGO T-Deck Plus: LoRa (SX1262), 320×240 LCD, QWERTY keyboard, trackball, GNSS and microSD.
-- **`spangap/hw-heltecv4`** — Heltec V4 LoRa board (headless).
+- **`spangap/hw-heltecv4-r2`** — Heltec V4 LoRa board, 2 MB PSRAM version (OLED status display).
+- **`spangap/hw-heltecv4-r8`** — Heltec V4 LoRa board, 8 MB PSRAM version (OLED status display).
 - **`spangap/hw-meshnology-w12`** — Meshnology W12: LR2021 dual-band LoRa behind a 30 dBm front end, 0.96" OLED, GNSS header.
 - **`spangap/hw-wismesh-tap-v2`** — RAK WisMesh TAP V2: handheld LoRa (SX1262) with a 2.8" capacitive touch screen, GNSS and microSD.
 - **`spangap/hw-lilygo-tbeam-supreme`** — LilyGo T-Beam S3 Supreme: LoRa (SX1262), AXP2101-gated rails, GNSS, battery-backed RTC, 1.3" OLED, 18650 holder.
@@ -94,4 +95,4 @@ spangap build reticulous/reticulous --with spangap/hw-lilygo-tdeck && \
 spangap flash
 ```
 
-*(Replace that `hw-lilygo-tdeck` with `hw-heltecv4` to build for that board, or leave off `--with ...` to get the generic build that works on any ESP32-S3 with at least 4MB of PSRAM and 8MB of flash.)*
+*(Replace that `hw-lilygo-tdeck` with `hw-heltecv4-r2` or `hw-heltecv4-r8` to build for the Heltec V4 with 2 or 8 MB of PSRAM, or leave off `--with ...` to get the generic build that works on any ESP32-S3 with at least 4MB of PSRAM and 8MB of flash.)*
